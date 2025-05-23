@@ -1,0 +1,7 @@
+speechrecognition
+pyttsx3
+openai-whisper
+numpy
+googletrans
+streamlit
+pygame
