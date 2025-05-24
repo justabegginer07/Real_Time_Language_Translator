@@ -5,3 +5,4 @@ numpy
 googletrans
 streamlit
 pygame
+ffmpeg
