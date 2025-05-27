@@ -1,18 +1,24 @@
-import os
 import speech_recognition as sr
 import pyttsx3
 import whisper
-import requests
-import tarfile
+from ffmpeg import *
+
 
 #print(whisper.available_models())
 model=whisper.load_model('base')
-transcription=model.transcribe('harvard.wav',fp16=False)
+try:
+    transcription=model.transcribe('harvard.wav',fp16=False)
+
+except:
+    ffmpeg_download()
+    transcription=model.transcribe('harvard.wav')
+
 print(transcription['text'])
 
 
 
-def ffmpeg_file(dest_folder='ffmpeg'):
+
+
     
 
 
